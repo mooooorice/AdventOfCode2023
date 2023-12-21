@@ -12,7 +12,7 @@ public class Tests
     public void TestTemplateWithTestinput()
     {
         string expectedOutput = "TESTINPUT"; // Replace with actual expected output
-        string testOutput = Program.ProcessInput("testinput.txt", "DayTemplate");
+        string testOutput = Program.ProcessInput("testinput.txt");
         StringAssert.AreEqualIgnoringCase(expectedOutput, testOutput);
     }
     
@@ -20,7 +20,7 @@ public class Tests
     public void TestTemplateWithFinalInput()
     {
         string expectedOutput = "FINALINPUT"; // Replace with actual expected output
-        string testOutput = Program.ProcessInput("input.txt", "DayTemplate");
+        string testOutput = Program.ProcessInput("input.txt");
         StringAssert.AreEqualIgnoringCase(expectedOutput, testOutput);
     }
 }

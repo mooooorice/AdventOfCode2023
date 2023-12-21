@@ -5,14 +5,15 @@ namespace DayTemplate
 {
     public class Program
     {
+        static string day = "DayTemplate";
         static void Main(string[] args)
         {
-            string actualOutput = ProcessInput("input.txt", "DayTemplate");
+            string actualOutput = ProcessInput("input.txt");
             Console.WriteLine(AppContext.BaseDirectory);
             Console.WriteLine(actualOutput);
         }
         
-        public static string ProcessInput(string inputFile, string day)
+        public static string ProcessInput(string inputFile)
         {
             string baseDirectory = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
             string fullFilePath = baseDirectory + "/" + day + "/Inputs/" + inputFile;
