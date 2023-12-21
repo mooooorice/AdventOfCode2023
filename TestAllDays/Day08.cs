@@ -11,16 +11,25 @@ public class Tests08
     [Test]
     public void TestTemplateWithTestinput()
     {
-        int expectedOutput = 1; 
+        int expectedOutput = 2; 
         int testOutput = Program.ProcessInput("testinput.txt");
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
+    }
+    
+    [Test]
+    public void TestTemplateWithTestinput2()
+    {
+        int expectedOutput = 6; 
+        int testOutput = Program.ProcessInput("testinput2.txt");
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
     
     [Test]
     public void TestTemplateWithFinalInput()
     {
-        int expectedOutput = 0; 
-        int testOutput = Program.ProcessInput("input.txt");
-        Assert.That(testOutput, Is.EqualTo(expectedOutput));
+        Program.Element networkElement;
+        Program.network.TryGetValue("AAA", out networkElement);
+        Assert.That(networkElement.Left, Is.EqualTo("CCC"));
+        Assert.That(networkElement.Right, Is.EqualTo("BBB"));
     }
 }
