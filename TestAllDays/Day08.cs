@@ -12,7 +12,8 @@ public class Tests08
     public void TestTemplateWithTestinput()
     {
         int expectedOutput = 2; 
-        int testOutput = Program.ProcessInput("testinput.txt");
+        var test = new NonStatic();
+        int testOutput = test.ProcessInput("testinput.txt");
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
     
@@ -20,16 +21,16 @@ public class Tests08
     public void TestTemplateWithTestinput2()
     {
         int expectedOutput = 6; 
-        int testOutput = Program.ProcessInput("testinput2.txt");
+        var test = new NonStatic();
+        int testOutput = test.ProcessInput("testinput2.txt");
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
-    
-    [Test]
-    public void TestTemplateWithFinalInput()
-    {
-        Program.Element networkElement;
-        Program.network.TryGetValue("AAA", out networkElement);
-        Assert.That(networkElement.Left, Is.EqualTo("CCC"));
-        Assert.That(networkElement.Right, Is.EqualTo("BBB"));
-    }
+        [Test]
+        public void TestPart2()
+        {
+            int expectedOutput = 6; 
+            var test = new Part2();
+            int testOutput = test.ProcessInput("input3.txt");
+            Assert.That(testOutput, Is.EqualTo(expectedOutput));
+        }
 }
