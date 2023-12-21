@@ -15,7 +15,7 @@ namespace DayTemplate
         
         public static int ProcessInput(string inputFile)
         {
-            string baseDirectory = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
+            string baseDirectory = Directory.GetParent(AppContext.BaseDirectory)!.Parent!.Parent!.Parent!.Parent!.FullName;
             string fullFilePath = baseDirectory + "/" + day + "/Inputs/" + inputFile;
             StringBuilder output = new StringBuilder();
             const Int32 BufferSize = 128;
