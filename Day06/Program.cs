@@ -8,29 +8,48 @@ namespace Day06
         static string day = "Day06";
         static void Main(string[] args)
         {
-            string actualOutput = ProcessInput("input.txt");
+            int actualOutput = ProcessInput("input.txt");
             Console.WriteLine(AppContext.BaseDirectory);
             Console.WriteLine(actualOutput);
         }
         
-        public static string ProcessInput(string inputFile)
+        public static int ProcessInput(string inputFile)
         {
-            string baseDirectory = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
-            string fullFilePath = baseDirectory + "/" + day + "/Inputs/" + inputFile;
-            StringBuilder output = new StringBuilder();
-            const Int32 BufferSize = 128;
-            
-            using (var fileStream = File.OpenRead(fullFilePath))
-            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
+            int[] inputTimeTest = {7, 15, 30};
+            int[] inputDistanceTest = { 9, 40, 200 };
+            int[] inputTimeFinal = {59, 70, 78, 78};
+            int[] inputDistanceFinal = {430, 1218, 1213, 1276};
+            if (inputFile.Equals("testinput.txt"))
             {
-                string line;
-                while ((line = streamReader.ReadLine()!) != null)
+                return getWins(inputTimeTest, inputDistanceTest);
+            }
+
+            return getWins(inputTimeFinal, inputDistanceFinal);
+        }
+
+        private static int getWins(int[] inputTime, int[] inputDistance)
+        {
+            int sum = 1;
+            for(int i = 0; i < inputDistance.Length; i++)
+            {
+                sum *= getWin(inputTime[i], inputDistance[i]);
+            }
+
+            return sum;
+        }
+
+        private static int getWin(int t, int d)
+        {
+            int sum = 0;
+            for (int i = 1; i <= t; i++)
+            {
+                if((i * (t - i)) > d)
                 {
-                    // Process each line and append to output
-                    output.AppendLine(line);
+                    sum++;
                 }
             }
-            return output.ToString().Trim();            
+
+            return sum;
         }
     }
 }
