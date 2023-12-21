@@ -1,0 +1,2 @@
+Wrote tests for the first time from ground up -> simpler than expected
+Nice setup with template I can improve and then copy-paste with few overhead 
