@@ -11,16 +11,16 @@ public class Tests
     [Test]
     public void TestTemplateWithTestinput()
     {
-        string expectedOutput = "TESTINPUT"; // Replace with actual expected output
-        string testOutput = Program.ProcessInput("testinput.txt");
-        StringAssert.AreEqualIgnoringCase(expectedOutput, testOutput);
+        int expectedOutput = 1; 
+        int testOutput = Program.ProcessInput("testinput.txt");
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
     
     [Test]
     public void TestTemplateWithFinalInput()
     {
-        string expectedOutput = "FINALINPUT"; // Replace with actual expected output
-        string testOutput = Program.ProcessInput("input.txt");
-        StringAssert.AreEqualIgnoringCase(expectedOutput, testOutput);
+        int expectedOutput = 0; 
+        int testOutput = Program.ProcessInput("input.txt");
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
 }

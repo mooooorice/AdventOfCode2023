@@ -8,12 +8,12 @@ namespace DayTemplate
         static string day = "DayTemplate";
         static void Main(string[] args)
         {
-            string actualOutput = ProcessInput("input.txt");
+            int actualOutput = ProcessInput("input.txt");
             Console.WriteLine(AppContext.BaseDirectory);
             Console.WriteLine(actualOutput);
         }
         
-        public static string ProcessInput(string inputFile)
+        public static int ProcessInput(string inputFile)
         {
             string baseDirectory = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
             string fullFilePath = baseDirectory + "/" + day + "/Inputs/" + inputFile;
@@ -30,7 +30,13 @@ namespace DayTemplate
                     output.AppendLine(line);
                 }
             }
-            return output.ToString().Trim();            
+
+            if (inputFile.Equals("input.txt"))
+            {
+                return 0;
+            }
+
+            return 1;
         }
     }
 }
