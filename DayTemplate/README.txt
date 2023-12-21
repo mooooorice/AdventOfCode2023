@@ -9,6 +9,7 @@ Copy TestAllDays/TestTemplate.cs to TestAllDays/dayxy.cs and add your new tests 
     Right click on the TestAllDays project -> add -> Reference -> select new Project
     Replace the topmost using
     Rename class (public class Test)
+    Add solution of the example to test
 run dotnet restore
 Push to git?
 Write the new tests and start coding
