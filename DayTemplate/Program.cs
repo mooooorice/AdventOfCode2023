@@ -23,7 +23,7 @@ namespace DayTemplate
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
             {
                 string line;
-                while ((line = streamReader.ReadLine()) != null)
+                while ((line = streamReader.ReadLine()!) != null)
                 {
                     // Process each line and append to output
                     output.AppendLine(line);
