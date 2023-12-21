@@ -9,7 +9,7 @@ public class TestDay06
     }
 
     [Test]
-    public void TestTemplateWithTestinput()
+    public void TestDay06TestInput()
     {
         int expectedOutput = 288; 
         int testOutput = Program.ProcessInput("testinput.txt");
@@ -17,7 +17,7 @@ public class TestDay06
     }
     
     [Test]
-    public void TestTemplateWithFinalInput()
+    public void TestDa06ActualInput()
     {
         int expectedOutput = 227850; 
         int testOutput = Program.ProcessInput("input.txt");

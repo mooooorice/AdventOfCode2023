@@ -1,6 +1,5 @@
 Todo:
-Do the same static/non-static change for the template
-
+Run Part 2?
 
 Done:
 Find out why it does not complete?

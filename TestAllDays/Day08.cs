@@ -1,7 +1,7 @@
 namespace TestTemplate;
 using Day08;
 
-public class Tests08
+public class TestDay08
 {
     [SetUp]
     public void Setup()
@@ -9,7 +9,7 @@ public class Tests08
     }
 
     [Test]
-    public void TestTemplateWithTestinput()
+    public void TestDay08TestInput1()
     {
         int expectedOutput = 2; 
         var test = new NonStatic();
@@ -18,7 +18,7 @@ public class Tests08
     }
     
     [Test]
-    public void TestTemplateWithTestinput2()
+    public void TestDay08TestInput2()
     {
         int expectedOutput = 6; 
         var test = new NonStatic();
@@ -26,7 +26,7 @@ public class Tests08
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
         [Test]
-        public void TestPart2()
+        public void TestDay08Part2()
         {
             int expectedOutput = 6; 
             var test = new Part2();
