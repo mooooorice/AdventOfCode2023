@@ -7,9 +7,9 @@ namespace Day09
     {
         static void Main(string[] args)
         {
-            var run = new Part1();
-            int actualOutput = run.ProcessInput("input.txt");
-            Console.WriteLine("Part 1: " + actualOutput);
+            var run = new Part1And2();
+            Console.WriteLine("Part 1: " + run.ProcessInput(Part1And2.sumFunctionEnd, "input.txt"));
+            Console.WriteLine("Part 2: " + run.ProcessInput(Part1And2.sumFunctionBeginning, "input.txt"));
         }
     }
 }
