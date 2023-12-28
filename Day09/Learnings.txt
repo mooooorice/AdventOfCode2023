@@ -1,2 +1,7 @@
 Wrote tests for the first time from ground up -> simpler than expected
 Nice setup with template I can improve and then copy-paste with few overhead 
+Overhead of setting up a new project for each day is way to much overhead, will setup one last one for the rest of the days
+Working more with classes and constructors
+Some linq (for input splitting and such)
+Refactoring
+Passing a function as argument
