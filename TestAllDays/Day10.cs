@@ -1,8 +1,8 @@
 namespace TestTemplate;
 
-using Day10ToEnd;
+using DayTemplate;
 
-public class TestDay10
+public class TestTemplate
 {
     [SetUp]
     public void Setup()
@@ -13,7 +13,7 @@ public class TestDay10
     public void TestTemplateWithTestinput()
     {
         int expectedOutput = 1;
-        var run = new Day10();
+        var run = new Part1();
         int testOutput = run.ProcessInput("testinput.txt");
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
@@ -22,7 +22,7 @@ public class TestDay10
     public void TestTemplateWithFinalInput()
     {
         int expectedOutput = 0;
-        var run = new Day10();
+        var run = new Part1();
         int testOutput = run.ProcessInput("input.txt");
         Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }

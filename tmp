@@ -1,0 +1,2 @@
+Unable to load project and obtain project information from MsBuild. Try to change MsBuild version in 'Settings | Build, Execution, Deployment | Toolset and Build'. Probably this project is incompatible with the current MsBuild.
+MsBuild error details: Can't patch ProcessStartInfo (.NET Core installation folder not found. Please, fix it in settings (File | Settings | Build, Execution, Deployment | Toolset and Build).)
