@@ -5,3 +5,11 @@ Working more with classes and constructors
 Some linq (for input splitting and such)
 Refactoring
 Passing a function as argument
+Aggregate functions
+One function for each layer (e.g for ImmutableArray<ImmuatableArray<int[]>> preprocessed, one for int[], one for ImmutableArray<int[]> and one for the last (or maybe within constructor))
+How amazing and important tests are (correct ouput, refactor, test again, if not -> debugg)
+Immutable verwenden (als object type (je nach dem auch global), aber auch als function input variable, to show that it does not change the list)
+Gibt extra was für paths im dotnet
+Dass eine Function keine Daten mutieren sollte, sondern sowas eher direkt im constructor passieren soll?
+??= (assigns value if null, otherwise stays the same input)
+functions can be declared in one line e.g. returnAddition(int x, int y) => x + y;

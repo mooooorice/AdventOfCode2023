@@ -10,20 +10,36 @@ public class TestDay09
     }
 
     [Test]
-    public void TestTemplateWithTestinput()
+    public void TestEndSumWithTestinput()
     {
         int expectedOutput = 114;
         var run = new Part1And2("testinput.txt");
-        // int testOutput = run.ProcessInput("testinput.txt");
-        // Assert.That(testOutput, Is.EqualTo(expectedOutput));
+        int testOutput = run.SumEnd();
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
-
     [Test]
-    public void TestTemplateWithFinalInput()
+    public void TestBeginningSumWithTestInput()
     {
-        int expectedOutput = 0;
-        var run = new Part1And2();
-        // int testOutput = run.ProcessInput("input.txt");
-        // Assert.That(testOutput, Is.EqualTo(expectedOutput));
+        int expectedOutput = 2;
+        var run = new Part1And2("testinput.txt");
+        int testOutput = run.SumBeginning();
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
+    }
+    [Test]
+    public void TestEndSumWithFinalInput()
+    {
+        int expectedOutput = 1584748274;
+        var run = new Part1And2("input.txt");
+        int testOutput = run.SumEnd();
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
+    }
+    
+    [Test]
+    public void TestBeginningSumWithFinalInput()
+    {
+        int expectedOutput = 1026;
+        var run = new Part1And2("input.txt");
+        int testOutput = run.SumBeginning();
+        Assert.That(testOutput, Is.EqualTo(expectedOutput));
     }
 }
