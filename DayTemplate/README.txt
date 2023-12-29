@@ -1,5 +1,5 @@
 Todo 2024:
-Modify the template and stuff, use one project and multiple classes
+Modify the template and stuff, use one project and multiple classes (each in it's own folder, what about namespaces?)
 move some stuff to external functions, e.g. input handling and call it
 Rewrite the README
 
